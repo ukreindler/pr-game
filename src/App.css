@@ -1,6 +1,17 @@
 .App {
   text-align: center;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 100px
+}
+
+.centerMe {
+  display: flex;
+  justify-content: center;
 }
 
 input {
@@ -19,4 +30,27 @@ ul {
 
 li {
   margin: 5px 0;
+}
+
+.review-requested {
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.pull-request-widget {
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.pull-request-comment {
+  margin-bottom: 10px;
+}
+
+.circular-image {
+  width: 40px;        /* Width of the image */
+  height: 40px;       /* Height of the image */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;   /* Ensures the image covers the circle without distortion */
+  border: 1px solid black;
 }
