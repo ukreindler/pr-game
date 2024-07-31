@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pr-game/static/css/main.f855e6bc.css",
+    "main.js": "/pr-game/static/js/main.83330180.js",
+    "static/js/453.2fbd19be.chunk.js": "/pr-game/static/js/453.2fbd19be.chunk.js",
+    "static/media/logo.svg": "/pr-game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pr-game/index.html",
+    "main.f855e6bc.css.map": "/pr-game/static/css/main.f855e6bc.css.map",
+    "main.83330180.js.map": "/pr-game/static/js/main.83330180.js.map",
+    "453.2fbd19be.chunk.js.map": "/pr-game/static/js/453.2fbd19be.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.83330180.js"
+  ]
+}
