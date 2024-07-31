@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  // Commit message text
+  const [commitMessage, setCommitMessage] = useState('');
+
+  // Commit message history
+  const [commitHistory, setCommitHistory] = useState([]);
+
+  // Handle input change
+  const handleInputChange = (e) => {
+    setCommitMessage(e.target.value);
+  };
+
+  // Handle form submit
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (commitMessage) {
+      setCommitHistory([...commitHistory, commitMessage]);
+      setCommitMessage('');
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Commit History</h1>
+      <form onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          placeholder="Enter commit message"
+          value={commitMessage}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Commit</button>
+      </form>
+      <ul>
+        {commitHistory.map((commit, index) => (
+          <li key={index}>{commit}</li>
+        ))}
+      </ul>
     </div>
-  );
+  )
 }
 
 export default App;
